@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammad Fahad — Software Engineer | Full-Stack Developer | QA Engineer | IT Support Specialist | BS Computer Science">
+    <title>Muhammad Fahad | Software Engineer & Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MF<span>.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="theme-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="theme-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"/></svg>
+                </button>
+                <button class="btn btn-primary btn-sm mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <button class="btn btn-link mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+                <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <span class="badge badge-gradient">BS Computer Science</span>
+                    <span class="badge badge-outline">The Islamia University of Bahawalpur</span>
+                    <span class="badge badge-outline">CGPA 3.0 / 4.0</span>
+                </div>
+                <h1 class="hero-title">Muhammad Fahad</h1>
+                <p class="hero-subtitle">Software Engineer | Full-Stack Developer | QA Engineer | IT Support Specialist</p>
+                <p class="hero-description">Building production systems across web, mobile, and backend. PHP 8 • Node.js • Flutter • MySQL • Agile/Scrum. Primary client contact across five concurrent projects.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline btn-lg">View Projects</a>
+                    <a href="assets/cv-downloads/Muhammad_Fahad_Resume_Overall.pdf" class="btn btn-outline btn-lg" download>Download CV</a>
+                </div>
+                <div class="hero-contact-chips">
+                    <div class="contact-chip">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>Fahad.dev61@gmail.com</span>
+                    </div>
+                    <div class="contact-chip">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-7-3.5L5 21V5z"/></svg>
+                        <span>+92 326-0779160</span>
+                    </div>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Faha61" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.301 3.495.998.108-.776.417-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.296c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/m-fahad-project-manager" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                    </div>
+                    <div class="hero-card-body">
+                        <div class="code-line"><span class="tag">&lt;</span><span class="tag-name">section</span> <span class="attr">id</span>=<span class="attr-value">"hero"</span><span class="tag">&gt;</span></div>
+                        <div class="code-line"><span class="indent"> </span><span class="tag">&lt;</span><span class="tag-name">h1</span><span class="tag">&gt;</span>Muhammad<span class="tag">&lt;</span>/<span class="tag-name">h1</span><span class="tag">&gt;</span></div>
+                        <div class="code-line"><span class="indent"> </span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span>Software Engineer<span class="tag">&lt;</span>/<span class="tag-name">p</span><span class="tag">&gt;</span></div>
+                        <div class="code-line"><span class="tag">&lt;</span>/<span class="tag-name">section</span><span class="tag">&gt;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Computer Science graduate with production experience across web, mobile, and QA workstreams.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="avatar-frame">MF</div>
+                        <div class="image-overlay"><span class="overlay-badge">Liaquatpur, Punjab, Pakistan</span></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Muhammad Fahad</h3>
+                    <p class="about-lead">BS Computer Science (Jun 2026) — The Islamia University of Bahawalpur</p>
+                    <p>I'm a versatile Software Engineer with hands-on production ownership across PHP 8, Node.js, Flutter, and MySQL platforms. I've debugged live 10-year-old codebases, shipped performance fixes (30.7s → 0.49s), built iOS CI/CD pipelines on Windows, and led forensic security audits classifying 30 findings with 18 remediated.</p>
+                    <p>I serve as the sole client contact across five concurrent projects, fluent in English, with experience in Agile/Scrum, Jira/ClickUp, SRS authoring, and end-to-end SDLC delivery.</p>
+                    <div class="about-stats">
+                        <div class="stat"><div class="stat-number">5+</div><div class="stat-label">Concurrent Projects</div></div>
+                        <div class="stat"><div class="stat-number">6</div><div class="stat-label">Role Specializations</div></div>
+                        <div class="stat"><div class="stat-number">180+</div><div class="stat-label">Jira Backlog Items</div></div>
+                        <div class="stat"><div class="stat-number">30</div><div class="stat-label">Audit Findings Fixed</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Organized across my six specialized CV tracks</p>
+            </div>
+            <div class="skill-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="database">Database</button>
+                <button class="filter-btn" data-filter="qa">QA & Testing</button>
+                <button class="filter-btn" data-filter="devops">DevOps & IT</button>
+            </div>
+            <div class="skills-grid" id="skills-grid">
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-icon">🐘</div>
+                    <h3>PHP 8 Backend</h3>
+                    <ul class="skill-list">
+                        <li>REST API design & development</li>
+                        <li>Legacy platform maintenance (10-year-old codebase)</li>
+                        <li>Security hardening & XSS remediation</li>
+                        <li>Hash-verified backups with tested rollback</li>
+                        <li>cPanel/SFTP deployment</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-icon">⚛️</div>
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li>React.js (Vite)</li>
+                        <li>Responsive design</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>HTML5, CSS3, JavaScript ES6+</li>
+                        <li>XSS-safe UI implementation</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="mobile">
+                    <div class="skill-icon">📱</div>
+                    <h3>Flutter Mobile</h3>
+                    <ul class="skill-list">
+                        <li>Dart & Flutter</li>
+                        <li>Firebase Auth (phone OTP)</li>
+                        <li>Dio/HTTP client</li>
+                        <li>iOS release engineering on Windows</li>
+                        <li>App Store submission & compliance</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="database">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>SQL & Databases</h3>
+                    <ul class="skill-list">
+                        <li>MySQL / MariaDB</li>
+                        <li>Relational schema design</li>
+                        <li>N+1 query elimination</li>
+                        <li>Query optimization (30.7s → 0.49s)</li>
+                        <li>MongoDB & Redis</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="qa">
+                    <div class="skill-icon">🧪</div>
+                    <h3>QA & Testing</h3>
+                    <ul class="skill-list">
+                        <li>Functional, regression & UAT</li>
+                        <li>API testing (Postman/curl)</li>
+                        <li>Defect triage & severity classification</li>
+                        <li>Root-cause analysis</li>
+                        <li>Release sign-off</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="devops">
+                    <div class="skill-icon">☁️</div>
+                    <h3>DevOps & IT Support</h3>
+                    <ul class="skill-list">
+                        <li>GitHub Actions CI/CD</li>
+                        <li>Docker & XAMPP</li>
+                        <li>Windows 11 administration</li>
+                        <li>PowerShell scripting</li>
+                        <li>WSL2 / Ubuntu Linux</li>
+                        <li>Backup & recovery (4.9 GB verified)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Reverse chronological — production roles since Feb 2026</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Technical Project Manager</h3>
+                            <span class="timeline-company">Synvex Pvt. Ltd., Islamabad</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Own five concurrent web, mobile, and QA projects end to end — requirements, SRS, release planning, deployment coordination.</li>
+                            <li>Author and maintain a 180+ item Jira backlog; run sprint planning, daily stand-ups, and retrospectives in Jira/ClickUp.</li>
+                            <li>Primary client point of contact across five projects; fluent English stakeholder communication.</li>
+                            <li>Production debugging on legacy PHP/MySQL; REST endpoint development; CI/CD release coordination.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer, Automation Team</h3>
+                            <span class="timeline-company">TrailMarq (Synvex In-House Product)</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Multi-tenant B2B CRM & marketing-automation SaaS: 327 files / 40,786 lines, 291 REST route handlers, 38-node automation engine.</li>
+                            <li>Fixed global webhook parsing bug breaking all Meta callbacks; fixed contact-resolution fault skipping automation steps.</li>
+                            <li>Led forensic audit: 30 findings classified (3 HIGH, 10 MED, 9 LOW), 18 fixed with regression verification.</li>
+                            <li>Redesigned notification de-duplication after proving fixed 120-second window dropped valid alerts.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>PHP Backend & Mobile API Contributor</h3>
+                            <span class="timeline-company">TwoAreOne.love (Tworone LLC)</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Maintain live 10-year-old PHP 8/MySQL platform with hash-verified backups and tested rollback.</li>
+                            <li>Removed N+1 query: 30.7s → 0.49s across 2,228 users.</li>
+                            <li>Shipped 206 Partial Content streaming endpoint for mobile video playback.</li>
+                            <li>Secured open photo-upload endpoint; fixed cross-user image attribution.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Mobile App Contributor</h3>
+                            <span class="timeline-company">TwoAreOne.love (Tworone LLC)</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Flutter/Dart mobile app: feature development, debugging, mobile-facing APIs against PHP 8 backend.</li>
+                            <li>Built iOS CI/CD pipeline on Windows (Swift toolchain, xtool, WSL2 USB forwarding) — cleared App Store review to build 15.</li>
+                            <li>Delivered chat timezone handling, email-send tracking, registration reclaim fixes.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>QA & Delivery Coordinator</h3>
+                            <span class="timeline-company">Veddera Modulars (US Modular Housing)</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Client-facing scope, priority, and progress management for US modular-housing website.</li>
+                            <li>Functional and regression QA with acceptance-criteria verification.</li>
+                            <li>Direct client feedback loops and release coordination.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>QA Tester & Client Liaison</h3>
+                            <span class="timeline-company">Emilia AI Studio & BulletPro</span>
+                            <span class="timeline-date">Mar 2026 – May 2026</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>AI product-photography platform and shot-accuracy tracking app — test matrices, defect triage, release sign-off.</li>
+                            <li>Client feedback loops and re-verification of calculation and history features.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section class="section bg-light" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Achievements</h2>
+                <p class="section-subtitle">Measurable impact across production platforms</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-number">30.7s → 0.49s</div>
+                    <div class="achievement-label">N+1 query elimination on live platform (2,228 users)</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">30 → 18</div>
+                    <div class="achievement-label">Audit findings classified and fixed with regression verification</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">Build 15</div>
+                    <div class="achievement-label">iOS app store builds shipped via Windows CI/CD pipeline</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">4.9 GB</div>
+                    <div class="achievement-label">Verified full-system backup with tested rollback procedure</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">291</div>
+                    <div class="achievement-label">REST route handlers audited for tenant isolation</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">5+</div>
+                    <div class="achievement-label">Concurrent projects — sole client point of contact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Production systems and academic work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">SaaS</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TrailMarq</h3>
+                        <p class="project-tagline">Multi-tenant B2B CRM & Marketing Automation SaaS</p>
+                        <p>Node.js/Express, MongoDB, Redis, React/Vite. 327 files / 40,786 lines, 291 REST routes, 38-node automation engine. Led forensic audit: 30 findings classified, 18 fixed with regression verification.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Faha61" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">Legacy</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TwoAreOne.love</h3>
+                        <p class="project-tagline">PHP 8/MySQL Legacy Platform Maintenance</p>
+                        <p>10-year-old dating/social platform. Fixed .MOV uploads (HTTP 500), shipped 206 Partial Content streaming endpoint, removed N+1 query (30.7s → 0.49s), secured open upload endpoint, built iOS pipeline on Windows.</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP 8</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">iOS</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Faha61" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">FYP</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Quick Food</h3>
+                        <p class="project-tagline">Final Year Project — Food Delivery Platform</p>
+                        <p>Node.js/Express + MySQL full-stack food-delivery web application. REST routes, relational MySQL schema (users, restaurants, menu items, orders), server-rendered views.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Faha61/FYP-FOOD-DELIVERY-WEBSITE-QUICK-FOOD-" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">AI</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>LLM Class Chatbot</h3>
+                        <p class="project-tagline">Python LLM Integration Chatbot</p>
+                        <p>Python stdlib HTTP server, OpenRouter LLM API integration, free-model fallback chain (429 rate-limit handling), environment-based secret management, XSS-safe chat UI.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenRouter</span>
+                            <span class="tag">LLM API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Faha61" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Services Section -->
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services & Specializations</h2>
+                <p class="section-subtitle">Six tailored CV tracks — choose the expertise you need</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🐘</div>
+                    <h3>PHP Backend Developer</h3>
+                    <p>PHP 8, MySQL, REST APIs, security hardening, performance tuning, legacy platform maintenance, hash-verified backups.</p>
+                    <ul class="service-details">
+                        <li>REST API design & consumption</li>
+                        <li>XSS prevention & endpoint authentication</li>
+                        <li>cPanel/SFTP deployment</li>
+                        <li>Query optimization (30.7s → 0.49s)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Node.js FullStack Developer</h3>
+                    <p>Express, React (Vite), MongoDB, Redis, WebSocket, JWT, Firebase Auth, multi-tenant SaaS architecture.</p>
+                    <ul class="service-details">
+                        <li>291 REST route handlers</li>
+                        <li>38-node automation engine</li>
+                        <li>Webhook integrations (Meta callbacks)</li>
+                        <li>CI/CD with GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Flutter Mobile Developer</h3>
+                    <p>Dart, Firebase Auth (phone OTP), Dio/HTTP, iOS release engineering on Windows, App Store compliance.</p>
+                    <ul class="service-details">
+                        <li>iOS builds without a Mac</li>
+                        <li>WSL2 USB device forwarding</li>
+                        <li>Mobile-facing API development</li>
+                        <li>App Store review compliance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗄️</div>
+                    <h3>SQL Database Developer</h3>
+                    <p>MySQL/MariaDB, query optimization, schema design, N+1 elimination, data integrity, MongoDB & Redis.</p>
+                    <ul class="service-details">
+                        <li>Relational schema design</li>
+                        <li>Indexing strategy</li>
+                        <li>Data migration with rollback</li>
+                        <li>Production change discipline</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧪</div>
+                    <h3>QA Test Engineer</h3>
+                    <p>Functional, regression & UAT testing, API testing, defect triage, release sign-off, forensic audits.</p>
+                    <ul class="service-details">
+                        <li>Test case design & execution</li>
+                        <li>Postman/curl API testing</li>
+                        <li>Severity/priority classification</li>
+                        <li>Acceptance-criteria verification</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>IT Support Specialist</h3>
+                    <p>Windows 11 administration, PowerShell, WSL2/Ubuntu, backup & recovery, network diagnostics, application support.</p>
+                    <ul class="service-details">
+                        <li>4.9 GB verified backup/recovery</li>
+                        <li>iOS CI/CD on Windows</li>
+                        <li>TCP port testing & health checks</li>
+                        <li>Hardware fault diagnosis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Available for freelance, contract, and full-time opportunities</p>
+            </div>
+<div class="contact-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value" id="email-value">Fahad.dev61@gmail.com</div>
+        </div>
+    </div>
+X
+<div class="contact-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1 3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value" id="phone-value">+92 326-0779160</div>
+        </div>
+    </div>
+<div class="contact-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Liaquatpur, Punjab, Pakistan</div>
+        </div>
+    </div>
+<div class="contact-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        <div>
+            <div class="contact-label">Available For</div>
+            <div class="contact-value">Freelance · Contract · Full-Time</div>
+        </div>
+    </div>
+<div class="contact-downloads">
+        <h4>Download CV Versions</h4>
+        <div class="download-list">
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>PHP Backend Developer CV</span><span class="dl-size">PDF</span>
+            </a>
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>Node.js FullStack Developer CV</span><span class="dl-size">PDF</span>
+            </a>
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>Flutter Mobile Developer CV</span><span class="dl-size">PDF</span>
+            </a>
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>SQL Database Developer CV</span><span class="dl-size">PDF</span>
+            </a>
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>QA Test Engineer CV</span><span class="dl-size">PDF</span>
+            </a>
+            <a href="#" class="download-item" onclick="event.preventDefault(); alert('Add your CV PDF files to assets/cv-downloads/ folder.');">
+                <span>IT Support Specialist CV</span><span class="dl-size">PDF</span>
+            </a>
+        </div>
+    </div>
+<div class="contact-form-card">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Send Message</button>
+                    </form>
+                    <div class="form-success" id="form-success" style="display:none;">
+                        <div class="success-icon">✓</div>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    </div>
+                </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">MF<span>.</span></div>
+                    <p>Muhammad Fahad — Software Engineer | Full-Stack | QA | IT Support</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/Faha61" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/m-fahad-project-manager" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:Fahad.dev61@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Muhammad Fahad. Built with HTML, CSS & JavaScript. Deployed on GitHub Pages.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
