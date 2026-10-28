@@ -1,116 +1,59 @@
-// Portfolio JavaScript
 (function () {
-    'use strict';
+  'use strict';
+  var root = document.documentElement;
 
-    // Theme Toggle
-    const htmlElement = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = themeToggle.querySelector('.sun');
-    const moonIcon = themeToggle.querySelector('.moon');
+  // Theme
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (dark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'dark');
+    try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
+  });
 
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Mobile menu
+  var nav = document.getElementById('nav');
+  var menuBtn = document.getElementById('menu-btn');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        htmlElement.setAttribute('data-theme', 'dark');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        const isDark = htmlElement.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-            htmlElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        } else {
-            htmlElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
+  // Copy buttons
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    var label = btn.textContent;
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = label; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
+      else done();
     });
+  });
 
-    // Mobile Menu
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileCloseBtn = document.getElementById('mobile-close-btn');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-
-    function openMobileMenu() {
-        mobileMenuOverlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeMobileMenu() {
-        mobileMenuOverlay.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-
-    mobileMenuBtn.addEventListener('click', openMobileMenu);
-    mobileCloseBtn.addEventListener('click', closeMobileMenu);
-
-    mobileMenuOverlay.addEventListener('click', (e) => {
-        if (e.target === mobileMenuOverlay) closeMobileMenu();
-    });
-
-    // Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = 'var(--shadow)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
-
-    // Scroll to Top
-    const scrollTopBtn = document.getElementById('scroll-top');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            scrollTopBtn.classList.add('visible');
-        } else {
-            scrollTopBtn.classList.remove('visible');
-        }
-    });
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-// Copy to Clipboard
-    function copyToClipboard(element, text) {
-        element.addEventListener('click', () => {
-            navigator.clipboard.writeText(text).then(() => {
-                const original = element.innerHTML;
-                element.innerHTML = 'Copied!';
-                element.style.color = 'var(--primary-light)';
-                setTimeout(() => {
-                    element.innerHTML = original;
-                    element.style.color = '';
-                }, 2000);
-            });
-        });
-    }
-    const emailValue = document.getElementById('email-value');
-    const phoneValue = document.getElementById('phone-value');
-    copyToClipboard(emailValue, 'Fahad.dev61@gmail.com');
-    copyToClipboard(phoneValue, '+92 326-0779160');
-
-    // Intersection Observer
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    document.querySelectorAll('.skill-card, .timeline-item, .project-card, .service-card, .achievement-card').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
+  // Timing race: 30.7 s is played back over 3.5 s of real time
+  var BEFORE = 30.7, AFTER = 0.49, PLAY_MS = 3500;
+  var tb = document.getElementById('t-before'), ta = document.getElementById('t-after');
+  var fb = document.getElementById('f-before'), fa = document.getElementById('f-after');
+  var raf = null;
+  function show(sb, sa) {
+    tb.textContent = sb.toFixed(1) + ' s';
+    ta.textContent = sa.toFixed(2) + ' s';
+    fb.style.width = (sb / BEFORE * 100) + '%';
+    fa.style.width = Math.max(sa / BEFORE * 100, sa > 0 ? 1.6 : 0) + '%';
+  }
+  function final() { show(BEFORE, AFTER); }
+  function run() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { final(); return; }
+    cancelAnimationFrame(raf);
+    var start = performance.now();
+    (function tick(now) {
+      var t = Math.min((now - start) / PLAY_MS * BEFORE, BEFORE);
+      show(t, Math.min(t, AFTER));
+      if (t < BEFORE) raf = requestAnimationFrame(tick); else final();
+    })(start);
+  }
+  document.getElementById('replay').addEventListener('click', run);
+  run();
 })();
